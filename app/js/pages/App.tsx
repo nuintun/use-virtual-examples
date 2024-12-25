@@ -134,7 +134,6 @@ export default memo(function App(): React.ReactElement {
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div className={styles.app}>
         <VirtualList />
-        {/* <ReactVirtualList /> */}
       </div>
     </ErrorBoundary>
   );

@@ -22,7 +22,7 @@ app.use(async ctx => {
 
   ctx.set('X-Content-Type-Options', 'nosniff');
 
-  ctx.body = fs.createWriteStream('wwwroot/app.html');
+  ctx.body = fs.createReadStream('wwwroot/app.html');
 });
 
 app.listen(8000, () => {

@@ -19,8 +19,8 @@ export default {
   name: 'React useVirtual',
   context: path.resolve('app'),
   outputPath: path.resolve('wwwroot/public'),
-  entryHTML: path.resolve('wwwroot/app.html'),
   entry: path.resolve('app/js/pages/index.tsx'),
+  entryHTML: path.resolve('wwwroot/index.html'),
   favicon: path.resolve('app/images/favicon.ico'),
   alias: { '/js': js, '/css': css, '/images': images },
   meta: { viewport: 'width=device-width,initial-scale=1.0' }

@@ -8,7 +8,7 @@ import { memo, useCallback, useLayoutEffect, useRef, useState } from 'react';
 
 const size = 50;
 const items = new Array(1000).fill(size);
-const sizes = items.map(() => size + Math.round(Math.random() * 100));
+const sizes = items.map(() => size + Math.round(Math.random() * 150));
 
 interface VirtualItemProps {
   item: Item;

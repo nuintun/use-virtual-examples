@@ -1,14 +1,16 @@
 import '/css/global.scss';
+
 import * as styles from '/css/App.module.scss';
 
 import { Button, Result, Space } from 'antd';
 import { Item, useVirtual } from 'use-virtual';
+import { getRandomInt } from '/js/utils/getRandom';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import { memo, useCallback, useLayoutEffect, useRef, useState } from 'react';
+import React, { memo, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-const size = 50;
+const size = 160;
 const items = new Array(1000).fill(size);
-const sizes = items.map(() => size + Math.round(Math.random() * 150));
+const sizes = items.map(() => getRandomInt(size, 360));
 
 interface VirtualItemProps {
   item: Item;
@@ -24,17 +26,28 @@ const VirtualItem = memo(({ item: { index, size, observe }, horizontal }: Virtua
     }
   }, []);
 
+  const background = useMemo<string>(() => {
+    const r = getRandomInt(127, 255);
+    const g = getRandomInt(127, 255);
+    const b = getRandomInt(127, 255);
+
+    return `rgb(${r}, ${g}, ${b})`;
+  }, []);
+
   return (
     <div
       ref={ref}
       key={index}
       role="listitem"
       aria-posinset={index}
-      style={{ [horizontal ? 'width' : 'height']: sizes[index] }}
-      className={`${styles.item} ${index % 2 ? styles.dark : styles.white}`}
+      className={`${styles.item}`}
+      style={{
+        background,
+        [horizontal ? 'width' : 'height']: sizes[index]
+      }}
     >
-      <span style={{ color: 'green' }}>
-        📏 {index}-{size}-{sizes[index]}
+      <span className={styles.text}>
+        📏 {index}-{size}px-{sizes[index]}px
       </span>
     </div>
   );

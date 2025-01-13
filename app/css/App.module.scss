@@ -16,7 +16,6 @@
     display: flex;
     overflow: auto;
     position: relative;
-    border: 1px solid #ddd;
     transform: translateZ(0);
 
     .frame {
@@ -25,18 +24,15 @@
       transform: translateZ(0);
 
       .item {
+        border: none;
         display: flex;
         overflow: hidden;
         align-items: center;
         justify-content: center;
         transform: translateZ(0);
 
-        &.white {
-          background: #fff;
-        }
-
-        &.dark {
-          background: #e5e5e5;
+        .text {
+          color: rgb(0, 0, 0);
         }
       }
     }
@@ -47,10 +43,6 @@
 
         .item {
           width: 100%;
-
-          + .item {
-            border-top: 1px solid #ccc;
-          }
         }
       }
     }
@@ -64,10 +56,6 @@
           overflow: hidden;
           display: inline-flex;
           writing-mode: vertical-rl;
-
-          + .item {
-            border-left: 1px solid #ccc;
-          }
         }
       }
     }

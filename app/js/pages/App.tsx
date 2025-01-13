@@ -47,7 +47,7 @@ const VirtualItem = memo(({ item: { index, size, observe }, horizontal }: Virtua
       }}
     >
       <span className={styles.text}>
-        📏 {index}-{size}px-{sizes[index]}px
+        📏 {index} - {size}px - {background}
       </span>
     </div>
   );

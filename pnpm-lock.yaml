@@ -24,9 +24,6 @@ importers:
       koa-compress:
         specifier: ^5.1.1
         version: 5.1.1
-      koa-files:
-        specifier: ^4.0.1
-        version: 4.0.1(koa@2.15.3)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -1391,12 +1388,6 @@ packages:
   koa-convert@2.0.0:
     resolution: {integrity: sha512-asOvN6bFlSnxewce2e/DK3p4tltyfC4VM7ZwuTuepI7dEQVcvpyFuBcEARu1+Hxg8DIwytce2n7jrZtRlPrARA==}
     engines: {node: '>= 10'}
-
-  koa-files@4.0.1:
-    resolution: {integrity: sha512-1W8HORil2YevdGslOBKXGSG1rL/IQfUGdfO4OD2PKcwIJaU8WIDYFd77qx5XbLkWY/M42gv80zl1QtdWylwY+g==}
-    engines: {node: '>=8.0.0'}
-    peerDependencies:
-      koa: ^2.0.0
 
   koa-is-json@1.0.0:
     resolution: {integrity: sha512-+97CtHAlWDx0ndt0J8y3P12EWLwTLMXIfMnYDev3wOTwH/RpBGMlfn4bDXlMEg1u73K6XRE9BbUp+5ZAYoRYWw==}
@@ -3877,13 +3868,6 @@ snapshots:
     dependencies:
       co: 4.6.0
       koa-compose: 4.1.0
-
-  koa-files@4.0.1(koa@2.15.3):
-    dependencies:
-      etag: 1.8.1
-      koa: 2.15.3
-      range-parser: 1.2.1
-      tslib: 2.8.1
 
   koa-is-json@1.0.0: {}
 

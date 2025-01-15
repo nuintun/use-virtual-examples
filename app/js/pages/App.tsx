@@ -8,9 +8,9 @@ import { getRandomInt } from '/js/utils/getRandom';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import React, { memo, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-const size = 100;
+const size = 150;
 const items = new Array(1000).fill(size);
-const sizes = items.map(() => getRandomInt(size, 200));
+const sizes = items.map(() => getRandomInt(size, 300));
 
 interface VirtualItemProps {
   item: Item;

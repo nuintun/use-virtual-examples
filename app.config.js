@@ -15,10 +15,10 @@ const images = path.resolve('app/images');
 export default {
   ports: 8000,
   lang: 'zh-CN',
+  publicPath: '',
   name: 'React useVirtual',
   context: path.resolve('app'),
   outputPath: path.resolve('wwwroot/public'),
-  publicPath: '/use-virtual-examples/public/',
   entry: path.resolve('app/js/pages/index.tsx'),
   entryHTML: path.resolve('wwwroot/index.html'),
   favicon: path.resolve('app/images/favicon.ico'),

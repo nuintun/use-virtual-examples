@@ -19,8 +19,8 @@
     "format": "prettier --write . --ignore-path .prettierignore"
   },
   "dependencies": {
-    "@swc/helpers": "^0.5.15",
-    "antd": "^5.24.6",
+    "@swc/helpers": "^0.5.17",
+    "antd": "^5.24.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^5.0.0",

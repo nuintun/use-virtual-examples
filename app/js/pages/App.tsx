@@ -87,8 +87,11 @@ const VirtualList = () => {
 
   return (
     <>
-      <div ref={viewportRef} className={`${styles.viewport} ${horizontal ? styles.horizontal : styles.vertical}`}>
-        <div role="list" ref={listRef} className={styles.frame}>
+      <div
+        ref={viewportRef as React.RefObject<HTMLDivElement>}
+        className={`${styles.viewport} ${horizontal ? styles.horizontal : styles.vertical}`}
+      >
+        <div role="list" ref={listRef as React.RefObject<HTMLDivElement>} className={styles.frame}>
           {items.map(item => (
             <VirtualItem key={item.index} item={item} horizontal={horizontal} />
           ))}

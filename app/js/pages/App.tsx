@@ -5,8 +5,8 @@ import * as styles from '/css/App.module.scss';
 import { Button, Result, Space } from 'antd';
 import { Item, useVirtual } from 'use-virtual';
 import { getRandomInt } from '/js/utils/getRandom';
+import React, { memo, useCallback, useMemo, useState } from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import React, { memo, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 const size = 150;
 const items = new Array(1000).fill(size);
@@ -18,14 +18,6 @@ interface VirtualItemProps {
 }
 
 const VirtualItem = memo(({ item: { index, size, observe }, horizontal }: VirtualItemProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    if (ref.current) {
-      return observe(ref.current);
-    }
-  }, []);
-
   const background = useMemo<string>(() => {
     const r = getRandomInt(127, 255);
     const g = getRandomInt(127, 255);
@@ -34,10 +26,13 @@ const VirtualItem = memo(({ item: { index, size, observe }, horizontal }: Virtua
     return `rgb(${r}, ${g}, ${b})`;
   }, []);
 
+  const itemRef = useCallback((element: HTMLDivElement) => {
+    return observe(element);
+  }, []);
+
   return (
     <div
-      ref={ref}
-      key={index}
+      ref={itemRef}
       role="listitem"
       aria-posinset={index}
       className={`${styles.item}`}
@@ -60,10 +55,10 @@ const VirtualList = () => {
     size,
     count,
     horizontal,
-    overscan: 30,
-    onResize: event => console.log('onResize:', event),
-    onScroll: event => console.log('onScroll:', event),
-    onReachEnd: event => console.log('onReachEnd:', event)
+    overscan: 30
+    // onResize: event => console.log('onResize:', event),
+    // onScroll: event => console.log('onScroll:', event),
+    // onReachEnd: event => console.log('onReachEnd:', event)
   });
 
   const onClick = useCallback(() => {

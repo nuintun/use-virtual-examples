@@ -25,7 +25,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-error-boundary": "^6.0.0",
-    "use-virtual": "^0.2.0"
+    "use-virtual": "^0.2.1"
   },
   "devDependencies": {
     "@nuintun/svgo-loader": "^0.5.6",

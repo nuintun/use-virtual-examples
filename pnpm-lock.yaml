@@ -27,8 +27,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(react@19.2.0)
       use-virtual:
-        specifier: ^0.2.0
-        version: 0.2.0(react@19.2.0)
+        specifier: ^0.2.1
+        version: 0.2.1(react@19.2.0)
     devDependencies:
       '@nuintun/svgo-loader':
         specifier: ^0.5.6
@@ -1670,8 +1670,8 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
-  use-virtual@0.2.0:
-    resolution: {integrity: sha512-rXf5pc5PiOBWsrqU5lYyX2e4O4zZeAcyvl6NYG/dWr5xH2q3+gdi37H4DoMlQGiBEJjS6G9xUDYrEoUCMj0gtQ==}
+  use-virtual@0.2.1:
+    resolution: {integrity: sha512-Vq1SR/OY5vL+ZkCJnWZfY0tdtH2hmUGTRxE7Bli+WbJSwp8RMBEbqyHtUkAC5yukE/GCnmufytGsHPBSsMfgXg==}
     peerDependencies:
       react: '>=17.0.0'
 
@@ -3318,7 +3318,7 @@ snapshots:
 
   undici-types@7.16.0: {}
 
-  use-virtual@0.2.0(react@19.2.0):
+  use-virtual@0.2.1(react@19.2.0):
     dependencies:
       react: 19.2.0
       tslib: 2.8.1

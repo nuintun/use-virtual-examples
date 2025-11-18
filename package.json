@@ -21,7 +21,7 @@
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@swc/helpers": "^0.5.17",
-    "antd": "^5.28.1",
+    "antd": "^5.29.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-error-boundary": "^6.0.0",
